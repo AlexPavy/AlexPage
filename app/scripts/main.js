@@ -1,2 +1,6 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
+
+var app = angular.module('app', ['ngMaterial']);
+app.controller('MainCtrl', function($scope) {
+    $scope.education = [];
+});
