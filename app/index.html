@@ -20,7 +20,7 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-app="MainApp">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,76 +28,29 @@
     <div ng-controller="MainCtrl" layout="column" flex layout-fill>
       <md-content style="height: 600px;">
         <section>
-          <md-subheader class="md-primary">Unread Messages</md-subheader>
+          <md-subheader class="md-primary">Education</md-subheader>
           <md-list layout="column">
-            <md-item ng-repeat="message in education">
+            <md-item ng-repeat="ed in education">
               <md-item-content>
-                <div class="md-tile-left">
-                  <img ng-src="{{message.face}}" class="face" alt="{{message.who}}">
-                </div>
+<!--                <div class="md-tile-left">
+                  <img ng-src="{{ed.face}}" class="face" alt="{{message.who}}">
+                </div>-->
                 <div class="md-tile-content">
-                  <h3>{{message.what}}</h3>
-                  <h4>{{message.who}}</h4>
-                  <p>
-                    {{message.notes}}
-                  </p>
+                  <h3>{{ed.url}}</h3>
+                  <h4>{{ed.desc}}</h4>
                 </div>
               </md-item-content>
             </md-item>
           </md-list>
         </section>
         <section>
-          <md-subheader class="md-warn">Late Messages</md-subheader>
+          <md-subheader class="md-warn">Experience</md-subheader>
           <md-list layout="column">
-            <md-item ng-repeat="message in messages">
+            <md-item ng-repeat="ex in experience">
               <md-item-content>
-                <div class="md-tile-left">
-                  <img ng-src="{{message.face}}" class="face" alt="{{message.who}}">
-                </div>
                 <div class="md-tile-content">
-                  <h3>{{message.what}}</h3>
-                  <h4>{{message.who}}</h4>
-                  <p>
-                    {{message.notes}}
-                  </p>
-                </div>
-              </md-item-content>
-            </md-item>
-          </md-list>
-        </section>
-        <section>
-          <md-subheader>Read Messages</md-subheader>
-          <md-list layout="column">
-            <md-item ng-repeat="message in messages">
-              <md-item-content>
-                <div class="md-tile-left">
-                  <img ng-src="{{message.face}}" class="face" alt="{{message.who}}">
-                </div>
-                <div class="md-tile-content">
-                  <h3>{{message.what}}</h3>
-                  <h4>{{message.who}}</h4>
-                  <p>
-                    {{message.notes}}
-                  </p>
-                </div>
-              </md-item-content>
-            </md-item>
-          </md-list>
-        </section>
-        <section>
-          <md-subheader class="md-accent">Archived messages</md-subheader>
-          <md-list layout="column">
-            <md-item ng-repeat="message in messages">
-              <md-item-content>
-                <div class="md-tile-left">
-                  <img ng-src="{{message.face}}" class="face" alt="{{message.who}}">
-                </div>
-                <div class="md-tile-content">
-                  <h3>{{message.what}}</h3>
-                  <h4>{{message.who}}</h4>
-                  <p>
-                    {{message.notes}}
-                  </p>
+                  <h3>{{ex.url}}</h3>
+                  <h4>{{ex.desc}}</h4>
                 </div>
               </md-item-content>
             </md-item>
@@ -121,7 +74,7 @@
     <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="../bower_components/angular-material/angular-material.min.js"></script>
-    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/hammerjs/hammer.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
